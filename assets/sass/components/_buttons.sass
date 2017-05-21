@@ -1,0 +1,146 @@
+//Estilos
+.btn
+  border: none
+  +border-radius(2px)
+  display: inline-block
+  height: 36px
+  line-height: 36px
+  padding: 0 2rem
+  text-transform: uppercase
+  vertical-align: middle
+  -webkit-tap-highlight-color: transparent
+  background-color: $blue_5
+  color: $blue_3
+  font-weight: 500
+  letter-spacing: .5px
+  white-space: nowrap
+  overflow: hidden
+  -webkit-transition: all .3s ease
+  -moz-transition: all .3s ease
+  -ms-transition: all .3s ease
+  -o-transition: all .3s ease
+  transition: all .3s ease
+  cursor: pointer
+  &:hover
+    opacity: .8
+  &:active
+    background-color: rgba($blue_4, .3)
+
+.btn.simple
+  background: none !important
+  color: $grey_3
+  &:hover
+    background-color: $grey_5 !important
+  &:active
+    background-color: rgba($grey_4, .5)
+
+//Link
+a.btn
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  margin-right: 4px
+  text-align: center
+
+// Boton con todo el ancho
+.btn.fluid
+  width: 100% !important
+  text-align: center
+
+//Colores
+.btn.grey
+  background-color: $grey_5 !important
+  color: $grey_3 !important
+  &:active
+    background-color: rgba($grey_4, .3) !important
+.btn.green
+  background-color: $green_5 !important
+  color: $green_3 !important
+  &:active
+    background-color: rgba($green_4, .4) !important
+.btn.yellow
+  background-color: $yellow_5 !important
+  color: $yellow_2 !important
+  &:active
+    background-color: rgba($yellow_4, .3) !important
+.btn.orange
+  background-color: $orange_5 !important
+  color: $orange_3 !important
+  &:active
+    background-color: rgba($orange_4, .3) !important
+.btn.red
+  background-color: $red_5 !important
+  color: $red_3 !important
+  &:active
+    background-color: rgba($red_4, .3) !important
+.btn.purple
+  background-color: $purple_5 !important
+  color: $purple_3 !important
+  &:active
+    background-color: rgba($purple_4, .3) !important
+
+
+//Estilo boton desabilitado
+.btn[disabled],
+.btn.disabled
+  pointer-events: none
+  background-color: #f2f2f2 !important
+  box-shadow: none
+  color: #c5c5c5 !important
+  cursor: default
+  font-weight: 400
+
+//Tamaño L
+.btn.L
+  height: 42px
+  line-height: 42px
+  padding: 0 4rem
+  font-weight: 500
+  i.left
+    margin-right: 12px
+  i.right
+    margin-left: 12px
+.btn.icon
+  width: 36px
+  height: 36px
+  line-height: 36px
+  font-size: 18px
+  padding: 0
+.btn.orbed
+  text-align: center
+  +border-radius(50%)
+.btn.orbed
+  width: 36px
+  height: 36px
+  line-height: 36px
+  font-size: 18px
+  padding: 0
+.btn.orbed.L
+  width: 56px
+  height: 56px
+  line-height: 56px
+  font-size: 24px
+  padding: 0
+.btn.fixed
+  position: fixed
+  right: 23px
+  bottom: 23px
+  width: 56px
+  height: 56px
+  line-height: 56px
+  font-size: 24px
+  padding: 0
+  margin: 0 !important
+  text-align: center
+  +border-radius(50%)
+  background-color: $grey_2
+  color: $white
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  z-index: 999
+  animation: noop 1s infinite
+  -webkit-transform: translateZ(0)
+  &:active
+    background-color: rgba($blue_4, .3) !important

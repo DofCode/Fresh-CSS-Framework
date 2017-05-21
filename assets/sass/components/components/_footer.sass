@@ -1,0 +1,58 @@
+footer.footer
+  width: 100%
+  padding: 60px 15px 10px 15px
+  color: $white
+  background-color: $grey_2
+  &.footer.blue
+    background-color: $blue_2 !important
+  &.green
+    background-color: $green_2 !important
+  &.yellow
+    background-color: $yellow_2 !important
+  &.orange
+    background-color: $orange_2 !important
+  &.red
+    background-color: $red_2 !important
+  &.purple
+    background-color: $purple_2 !important
+  span.appName
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 300
+  p
+    font-size: 14px
+    padding-right: 15px
+    color: rgba($white, .8)
+    @media(max-width: $tablet)
+      padding-right: 0
+  ul
+    display: flex
+    justify-content: space-between
+    @media(max-width: $tablet)
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      padding: 0 15px
+    >li
+        margin-left: 15px
+        margin-right: 15px
+        @media(max-width: $tablet)
+          margin-left: 0
+          margin-right: 0
+          margin-bottom: 25px
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+          @media(max-width: $tablet)
+            margin-bottom: 0
+        >a
+          color: $white
+          text-transform: uppercase
+          -webkit-transition: all .3s ease
+          -moz-transition: all .3s ease
+          -ms-transition: all .3s ease
+          -o-transition: all .3s ease
+          transition: all .3s ease
+          &:hover
+            opacity: .7

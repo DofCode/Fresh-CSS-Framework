@@ -1,0 +1,92 @@
+// ==========================================================================
+// Fresh CSS Paginador
+// ==========================================================================
+//
+.pagination
+  display: flex
+  align-items: center
+  >li
+      margin-right: 4px
+      &:last-child
+        margin-right: 0
+      >a
+          display: block
+          width: 36px
+          height: 36px
+          line-height: 36px
+          text-align: center
+          font-size: 18px
+          +border-radius(2px)
+          color: #676767
+          -webkit-transition: all .3s ease
+          -moz-transition: all .3s ease
+          -ms-transition: all .3s ease
+          -o-transition: all .3s ease
+          transition: all .3s ease
+
+          > i
+              font-size: 16px
+          &:hover
+            background-color: $grey_5
+          &.active
+            background-color: $blue_5
+            color: $blue_2
+            font-weight: 500
+          &.disabled
+            cursor: default
+            opacity: .5
+            &:hover
+              background-color: rgba(#000, 0)
+
+// ===============================================
+// Redondos
+// ===============================================
+.pagination.orbed
+  >li
+    >a
+      +border-radius(50%  !important)
+// ===============================================
+//colores
+// ===============================================
+//Verde
+.pagination.green
+  >li
+    >a
+      &.active
+        background-color: $green_4 !important
+        color: rgba($black, .3) !important
+//Amarillo
+.pagination.yellow
+  >li
+    >a
+      &.active
+        background-color: $yellow_4 !important
+        color: rgba($black, .3) !important
+//Naranja
+.pagination.orange
+  >li
+    >a
+      &.active
+        background-color: $orange_4 !important
+        color: rgba($black, .3) !important
+//Rojo
+.pagination.red
+  >li
+    >a
+      &.active
+        background-color: $red_4 !important
+        color: rgba($black, .4) !important
+//Morado
+.pagination.purple
+  >li
+    >a
+      &.active
+        background-color: $purple_4 !important
+        color: rgba($black, .3) !important
+//Gris
+.pagination.grey
+  >li
+    >a
+      &.active
+        background-color: $grey_4 !important
+        color: rgba($black, .4) !important

@@ -1,0 +1,573 @@
+// ==========================================================================
+// Fresh CSS
+// ==========================================================================
+//
+// Indice
+//
+//  1. Estilos por defecto
+//  2. Texto alineamiento
+//  3. Texto suspensivo y no wrap
+//  4. Ocultar y mostrar elemento
+//  5. Ocultar elemento, responsive
+//  6. Mostrar elemento, responsive
+//  7. Margenes y paddings
+//  8. Parallax
+//  9. Modo de desarrollo
+//  10. Otros
+
+// ==========================================================================
+//  1. Estilos por defecto
+// ==========================================================================
+html
+ box-sizing: border-box
+body
+  background-color: #f5f8fa
+  overflow-y: scroll !important
+  color: #333
+  &::-webkit-scrollbar
+    width: 15px
+    background-color: #EBEBEB
+  &::-webkit-scrollbar-thumb
+    background-color: #ccc
+  &::-webkit-scrollbar-thumb:hover
+    background-color: #aaa
+.scroll
+  @media(max-width: $tablet)
+    overflow-y: hidden !important
+*, *:before, *:after
+ box-sizing: inherit
+ul
+  &:not(.browser-default)
+    padding-left: 0
+    list-style-type: none
+    li
+      list-style-type: none
+a
+	color: $blue_2
+	text-decoration: none
+  -webkit-tap-highlight-color: transparent
+
+// badge
+span.badge
+  line-height: inherit
+  float: right
+  margin-left: 7px
+  text-align: right
+  color: #92a8b7
+  &.left
+    float: left
+    margin-right: 7px
+    text-align: left
+
+// Estilo de los iconos
+i
+  line-height: inherit
+  &.left
+    float: left
+    margin-right: 7px
+  &.right
+    float: right
+    margin-left: 7px
+  &.tiny
+    font-size: 1rem
+  &.small
+    font-size: 2rem
+  &.medium
+    font-size: 4rem
+  &.large
+    font-size: 6rem
+
+.circle
+  +border-radius(50%)
+
+// Imagenes y video responsivo
+.embed_container
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  iframe, object, embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+img.responsive_img,
+video.responsive_video
+  max-width: 100%
+  height: auto
+
+// No seleccionar
+.no_select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  cursor: default
+
+// Otros estilos
+.center_block
+  margin-left: auto
+  margin-right: auto
+  display: block
+
+.circle
+  border-radius: 50%
+
+
+// ==========================================================================
+//  2. Texto alineamiento
+// ==========================================================================
+.text_left
+  text-align: left
+.text_center
+  text-align: center
+.text_right
+  text-align: right
+
+
+// ==========================================================================
+//  3. Texto suspensivo y no wrap
+// ==========================================================================
+.suspensive
+  display: block
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+.no_wrap
+  white-space: nowrap
+
+// ==========================================================================
+//  3. Sombras
+// ==========================================================================
+.shadow_0
+  box-shadow: none !important
+.shadow_1
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+.shadow_2
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)
+.shadow_3
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3)
+.shadow_4
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+.shadow_5
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)
+
+.hover_shadow
+  transition: box-shadow .25s
+  box-shadow: 0
+  &:hover
+    transition: box-shadow .25s
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+
+// ==========================================================================
+//  4. Ocultar y mostrar elemento
+// ==========================================================================
+.hide
+  display: none
+.block
+  display: block
+// ==========================================================================
+//  5. Ocultar elemento, responsive
+// ==========================================================================
+//laptopL
+.laptopL_hide
+  @media(max-width: $laptopL)
+    display: none
+
+//laptop
+.laptop_hide
+  @media(max-width: $laptop)
+    display: none
+
+//tablet
+.tablet_hide
+  @media(max-width: $tablet)
+    display: none
+
+//mobileL
+.mobileL_hide
+  @media(max-width: $mobileL)
+    display: none
+
+//mobileM
+.mobileM_hide
+  @media(max-width: $mobileM)
+    display: none
+
+//mobileS
+.mobileS_hide
+  @media(max-width: $mobileS)
+    display: none
+
+
+
+// ==========================================================================
+//  6. Mostrar elemento, responsive
+// ==========================================================================
+//laptopL
+.laptopL_block
+  @media(max-width: $laptopL)
+    display: block
+
+//laptop
+.laptop_block
+  @media(max-width: $laptop)
+    display: block
+
+//tablet
+.tablet_block
+  @media(max-width: $tablet)
+    display: block
+
+//mobileL
+.mobileL_block
+  @media(max-width: $mobileL)
+    display: block
+
+//mobileM
+.mobileM_block
+  @media(max-width: $mobileM)
+    display: block
+
+//mobileS
+.mobileS_block
+  @media(max-width: $mobileS)
+    display: block
+
+
+
+// ==========================================================================
+//  7. Margenes y paddings
+// ==========================================================================
+
+.margin_none
+  margin: 0 !important
+@media(max-width: $laptopL)
+  .margin_laptopL_none
+    margin: 0 !important
+@media(max-width: $laptop)
+  .margin_laptop_none
+    margin: 0 !important
+@media(max-width: $tablet)
+  .margin_tablet_none
+    margin: 0 !important
+@media(max-width: $mobileL)
+  .margin_mobileL_none
+    margin: 0 !important
+@media(max-width: $mobileM)
+  .margin_mobileM_none
+    margin: 0 !important
+@media(max-width: $mobileS)
+  .margin_mobileS_none
+    margin: 0 !important
+
+.padding_none
+  padding: 0 !important
+@media(max-width: $laptopL)
+  .padding_laptopL_none
+    padding: 0 !important
+@media(max-width: $laptop)
+  .padding_laptop_none
+    padding: 0 !important
+@media(max-width: $tablet)
+  .padding_tablet_none
+    padding: 0 !important
+@media(max-width: $mobileL)
+  .padding_mobileL_none
+    padding: 0 !important
+@media(max-width: $mobileM)
+  .padding_mobileM_none
+    padding: 0 !important
+@media(max-width: $mobileS)
+  .padding_mobileS_none
+    padding: 0 !important
+
+//Margins
+.margin
+  margin: 15px
+
+//Bottom
+.margin_bottom
+  margin-bottom: 15px
+.margin_bottom_none
+  margin-bottom: 0
+@media(max-width: $laptopL)
+  .margin_bottom_laptopL_none
+    margin-bottom: 0
+@media(max-width: $laptop)
+  .margin_bottom_laptop_none
+    margin-bottom: 0
+@media(max-width: $tablet)
+  .margin_bottom_tablet_none
+    margin-bottom: 0
+@media(max-width: $mobileL)
+  .margin_bottom_mobileL_none
+    margin-bottom: 0
+@media(max-width: $mobileM)
+  .margin_bottom_mobileM_none
+    margin-bottom: 0
+@media(max-width: $mobileS)
+  .margin_bottom_mobileS_none
+    margin-bottom: 0
+//Top
+.margin_top
+  margin-top: 15px
+.margin_top_none
+  margin-top: 0
+@media(max-width: $laptopL)
+  .margin_top_laptopL_none
+    margin-top: 0
+@media(max-width: $laptop)
+  .margin_top_laptop_none
+    margin-top: 0
+@media(max-width: $tablet)
+  .margin_top_tablet_none
+    margin-top: 0
+@media(max-width: $mobileL)
+  .margin_top_mobileL_none
+    margin-top: 0
+@media(max-width: $mobileM)
+  .margin_top_mobileM_none
+    margin-top: 0
+@media(max-width: $mobileS)
+  .margin_top_mobileS_none
+    margin-top: 0
+
+//Left
+.margin_left
+  margin-left: 15px
+.margin_left_none
+  margin-left: 0
+@media(max-width: $laptopL)
+  .margin_left_laptopL_none
+    margin-left: 0
+@media(max-width: $laptop)
+  .margin_left_laptop_none
+    margin-left: 0
+@media(max-width: $tablet)
+  .margin_left_tablet_none
+    margin-left: 0
+@media(max-width: $mobileL)
+  .margin_left_mobileL_none
+    margin-left: 0
+@media(max-width: $mobileM)
+  .margin_left_mobileM_none
+    margin-left: 0
+@media(max-width: $mobileS)
+  .margin_left_mobileS_none
+    margin-left: 0
+
+//Right
+.margin_right
+  margin-right: 15px
+.margin_right_none
+  margin-right: 0
+@media(max-width: $laptopL)
+  .margin_right_laptopL_none
+    margin-right: 0
+@media(max-width: $laptop)
+  .margin_right_laptop_none
+    margin-right: 0
+@media(max-width: $tablet)
+  .margin_right_tablet_none
+    margin-right: 0
+@media(max-width: $mobileL)
+  .margin_right_mobileL_none
+    margin-right: 0
+@media(max-width: $mobileM)
+  .margin_right_mobileM_none
+    margin-right: 0
+@media(max-width: $mobileS)
+  .margin_right_mobileS_none
+    margin-right: 0
+
+//Paddings
+.padding
+  padding: 15px
+
+//Bottom
+.padding_bottom
+  padding-bottom: 15px
+.padding_bottom_none
+  padding-bottom: 0
+@media(max-width: $laptopL)
+  .padding_bottom_laptopL_none
+    padding-bottom: 0
+@media(max-width: $laptop)
+  .padding_bottom_laptop_none
+    padding-bottom: 0
+@media(max-width: $tablet)
+  .padding_bottom_tablet_none
+    padding-bottom: 0
+@media(max-width: $mobileL)
+  .padding_bottom_mobileL_none
+    padding-bottom: 0
+@media(max-width: $mobileM)
+  .padding_bottom_mobileM_none
+    padding-bottom: 0
+@media(max-width: $mobileS)
+  .padding_bottom_mobileS_none
+    padding-bottom: 0
+
+//Top
+.padding_top
+  padding-top: 15px
+.padding_top_none
+  padding-top: 0
+@media(max-width: $laptopL)
+  .padding_top_laptopL_none
+    padding-top: 0
+@media(max-width: $laptop)
+  .padding_top_laptop_none
+    padding-top: 0
+@media(max-width: $tablet)
+  .padding_top_tablet_none
+    padding-top: 0
+@media(max-width: $mobileL)
+  .padding_top_mobileL_none
+    padding-top: 0
+@media(max-width: $mobileM)
+  .padding_top_mobileM_none
+    padding-top: 0
+@media(max-width: $mobileS)
+  .padding_top_mobileS_none
+    padding-top: 0
+
+//Left
+.padding_left
+  padding-left: 15px
+.padding_left_none
+  padding-left: 0
+@media(max-width: $laptopL)
+  .padding_left_laptopL_none
+    padding-left: 0
+@media(max-width: $laptop)
+  .padding_left_laptop_none
+    padding-left: 0
+@media(max-width: $tablet)
+  .padding_left_tablet_none
+    padding-left: 0
+@media(max-width: $mobileL)
+  .padding_left_mobileL_none
+    padding-left: 0
+@media(max-width: $mobileM)
+  .padding_left_mobileM_none
+    padding-left: 0
+@media(max-width: $mobileS)
+  .padding_left_mobileS_none
+    padding-left: 0
+
+//Right
+.padding_right
+  padding-right: 15px
+.padding_right_none
+  padding-right: 0
+@media(max-width: $laptopL)
+  .padding_right_laptopL_none
+    padding-right: 0
+@media(max-width: $laptop)
+  .padding_right_laptop_none
+    padding-right: 0
+@media(max-width: $tablet)
+  .padding_right_tablet_none
+    padding-right: 0
+@media(max-width: $mobileL)
+  .padding_right_mobileL_none
+    padding-right: 0
+@media(max-width: $mobileM)
+  .padding_right_mobileM_none
+    padding-right: 0
+@media(max-width: $mobileS)
+  .padding_right_mobileS_none
+    padding-right: 0
+
+// ==========================================================================
+//  8. Parallax
+// ==========================================================================
+.parallax
+    min-height: 400px
+    background: transparent
+
+
+// ==========================================================================
+//  9. Modo de desarrollo
+// ==========================================================================
+body.developer
+  position: relative
+  .row
+    [class^=col_]
+      +box-shadow(0 0 0 1px #DDD)
+      position: relative
+      &:before
+        position: absolute
+        padding: 2px 5px
+        letter-spacing: .5px
+        background: #f9f9f9
+        top: 0
+        right: 0
+        font-family: Arial
+        -webkit-font-smoothing: antialiased
+        color: #555
+        z-index: 2
+        content: attr(class)
+        font-size: .9rem
+        border: 1px solid #ddd
+        border-top: none
+        border-right: none
+  &::after
+    position: fixed
+    padding: 1px 5px
+    bottom: 0
+    right: 0
+    font-family: "Roboto", sans-serif
+    -webkit-font-smoothing: antialiased
+    background: #FFF
+    color: #555
+    z-index: 999
+    content: 'Desktop | Development mode'
+    font-size: .9rem
+    border: 1px solid #ddd
+    border-bottom: none
+    border-right: none
+    @media(max-width: $laptopL)
+      content: 'Laptop L | Development mode'
+    @media(max-width: $laptop)
+      content: 'Laptop | Development mode'
+    @media(max-width: $tablet)
+      content: 'Tablet | Development mode'
+    @media(max-width: $mobileL)
+      content: 'Mobile L | Development mode'
+    @media(max-width: $mobileM)
+      content: 'Mobile M | Development mode'
+    @media(max-width: $mobileS)
+      content: 'Mobile S | Development mode'
+
+
+// ==========================================================================
+//  10. Otros
+// ==========================================================================
+.divider
+  height: 1px
+  border-bottom: 1px solid #ddd
+  overflow: hidden
+  margin-bottom: 15px
+
+.text_200
+  font-weight: 200
+.text_300
+  font-weight: 300
+.text_400
+  font-weight: 400
+.text_500
+  font-weight: 500
+.text_700
+  font-weight: 700
+
+.text_uppercase
+  text-transform: uppercase
+  letter-spacing: .5px

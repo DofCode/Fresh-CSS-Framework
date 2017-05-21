@@ -1,0 +1,93 @@
+.navFixed
+  position: relative
+  overflow: hidden
+  height: 52px
+  @media(max-width: $tablet)
+    height: 60px
+.navFixed
+  >nav.nav
+      position: fixed
+      top: 0
+      z-index: 999
+      width: 100%
+      animation: noop 1s infinite
+      -webkit-transform: translateZ(0)
+nav.nav
+  width: 100%
+  padding: 12px 15px
+  display: table
+  > div
+      display: table-cell
+      vertical-align: middle
+      float: none !important
+  .appName
+    font-size: 18px
+    white-space: nowrap
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: default
+    >span a
+      color: #333
+  ul
+    display: flex
+    justify-content:  flex-end
+    margin: 0
+    padding: 5px 0
+    >li
+      position: relative
+      margin-left: 25px
+      &:first-child
+        margin-left: 0
+      >a
+        display: block
+        letter-spacing: .5px
+        font-size: 15px
+        white-space: nowrap
+        -webkit-transition: all .3s ease
+        -moz-transition: all .3s ease
+        -ms-transition: all .3s ease
+        -o-transition: all .3s ease
+        transition: all .3s ease
+        color: $grey_2
+        &:hover
+          opacity: .8
+        &.active
+          font-weight: bold
+    >.submenu
+        &:hover
+          >ul
+            visibility: visible
+            opacity: 1
+            transform: translateY(0%)
+            transition-delay: 0s, 0s, 0.3s
+            pointer-events: painted
+        >ul
+          transform: translateY(-2em)
+          transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s
+          visibility: hidden
+          pointer-events: none
+          opacity: 0
+          flex-direction: column
+          position: absolute
+          right: -5px
+          z-index: 1200
+          width: 250px
+          background: $white
+          +box-shadow(0px 2px 8px 0 rgba(0, 0, 0, 0.19))
+          >li
+            margin-left: 0
+            >a
+              padding: 12px 15px
+              text-align: left
+              display: block
+              white-space: nowrap
+              overflow: hidden
+              text-overflow: ellipsis
+              color: $grey_2
+              &:hover
+                opacity: 1 !important
+                background: #EEE

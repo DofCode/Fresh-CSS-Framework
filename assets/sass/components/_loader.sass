@@ -1,0 +1,265 @@
+// ==========================================================================
+// Fresh CSS
+// ==========================================================================
+//
+// Indice
+//
+//  1. Loader barra
+//  2. Determinate
+//  3. Loader circular
+
+// ==========================================================================
+//  1. Loader barra
+// ==========================================================================
+.infinite
+  position: relative
+  overflow: hidden
+  height: 2px
+  margin: 15px 0
+  &::after
+    content: ''
+    position: absolute
+    background: $blue_5
+    width: 5%
+    height: 2px
+    animation: bar 2s infinite
+    z-index: 2
+  >.preloader
+    position: absolute
+    background: $blue_2
+    width: 100%
+    height: 2px
+    &::before
+      content: ''
+      position: absolute
+      background: $blue_5
+      width: 5%
+      height: 2px
+      animation: bar 2s 0.5s infinite
+    &::after
+      content: ''
+      position: absolute
+      background: $blue_5
+      width: 5%
+      height: 2px
+      animation: bar 2s 1s infinite
+// ==========
+// Colores
+// ==========
+//Verde
+.infinite.green
+  &::after
+    background: $green_5
+  >.preloader
+    background: $green_2
+    &::before
+      background: $green_5
+    &::after
+      background: $green_5
+
+//Amarillo
+.infinite.yellow
+  &::after
+    background: $yellow_5
+  >.preloader
+    background: $yellow_2
+    &::before
+      background: $yellow_5
+    &::after
+      background: $yellow_5
+
+//Rojo
+.infinite.red
+  &::after
+    background: $red_5
+  >.preloader
+    background: $red_2
+    &::before
+      background: $red_5
+    &::after
+      background: $red_5
+
+//Naranja
+.infinite.orange
+  &::after
+    background: $orange_5
+  >.preloader
+    background: $orange_2
+    &::before
+      background: $orange_5
+    &::after
+      background: $orange_5
+
+//Morado
+.infinite.purple
+  &::after
+    background: $purple_5
+  >.preloader
+    background: $purple_2
+    &::before
+      background: $purple_5
+    &::after
+      background: $purple_5
+
+//Gris
+.infinite.grey
+  &::after
+    background: $grey_5
+  >.preloader
+    background: $grey_2
+    &::before
+      background: $grey_5
+    &::after
+      background: $grey_5
+
+// ==========
+// Animación
+// ==========
+@keyframes bar
+  from
+    left: 0
+  to
+    left: 100%
+
+// ==========================================================================
+//  2. Determinate
+// ==========================================================================
+.determinate
+  height: 2px
+  margin: 15px 0
+  background: $blue_5
+  >.preloader
+      transition: width .3s linear
+      height: 100%
+      background:  $blue_2
+// ==========
+// Colors
+// ==========
+//Verde
+.determinate.green
+  background: $green_5
+  >.preloader
+    background:  $green_2
+//Amarillo
+.determinate.yellow
+  background: $yellow_5
+  >.preloader
+    background:  $yellow_2
+//Naranja
+.determinate.orange
+  background: $orange_5
+  >.preloader
+    background:  $orange_2
+//Rojo
+.determinate.red
+  background: $red_5
+  >.preloader
+    background:  $red_2
+//Morado
+.determinate.purple
+  background: $purple_5
+  >.preloader
+    background:  $purple_2
+//Gris
+.determinate.grey
+  background: $grey_5
+  >.preloader
+    background:  $grey_2
+
+// ==========================================================================
+//  3. Loader circular
+// ==========================================================================
+.loader_circle
+  width: 38px
+  height: 38px
+  padding: 2px
+  .loader
+    position: relative
+    width: 100%
+    height: 100%
+  .quart
+    border-radius: 50px
+    border: 2px solid $blue_5
+    &:after
+      content: ''
+      position: absolute
+      top: -2px
+      right: -2px
+      bottom: -2px
+      left: -2px
+      border-radius: 50px
+      border: 2px solid transparent
+      border-top-color: $blue_2
+      -webkit-animation: circle 1s linear infinite
+      animation: circle 1s linear infinite
+
+.loader_circle.S
+  width: 24px
+  height: 24px
+
+.loader_circle.L
+  width: 56px
+  height: 56px
+
+// ==========
+// Colores
+// ==========
+
+//Verde
+.loader_circle.green
+  .quart
+    border: 2px solid $green_5 !important
+    &:after
+      border-top-color: $green_2
+
+//Amarillo
+.loader_circle.yellow
+  .quart
+    border: 2px solid $yellow_5 !important
+    &:after
+      border-top-color: $yellow_2
+
+//Naranja
+.loader_circle.orange
+  .quart
+    border: 2px solid $orange_5 !important
+    &:after
+      border-top-color: $orange_2
+
+//Rojo
+.loader_circle.orange
+  .quart
+    border: 2px solid $red_5 !important
+    &:after
+      border-top-color: $red_2
+
+//Morado
+.loader_circle.purple
+  .quart
+    border: 2px solid $purple_5 !important
+    &:after
+      border-top-color: $purple_2
+
+//Gris
+.loader_circle.grey
+  .quart
+    border: 2px solid $grey_5 !important
+    &:after
+      border-top-color: $grey_3
+
+// ==========
+// Animación
+// ==========
+@keyframes circle
+  0%
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    tranform: rotate(0deg)
+  100%
+    -moz-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+    -ms-transform: rotate(360deg)
+    tranform: rotate(360deg)

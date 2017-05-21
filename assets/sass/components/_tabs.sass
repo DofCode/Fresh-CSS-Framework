@@ -1,0 +1,69 @@
+.tabs
+  display: flex
+  justify-content:
+  width: 100%
+  //min-width: $mobileL
+  height: 48px
+  overflow-y: hidden
+  overflow-x: auto
+  background: #eee
+  white-space: nowrap
+  background: $white
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+  margin: 0
+  &.center
+    justify-content: space-between
+    li
+      width: 100%
+  &.icons
+    justify-content: space-between
+    height: 48px
+    line-height: normal
+    li
+      width: 100%
+      a
+        padding: 5px 15px
+        font-size: 10px
+        line-height: normal
+        i
+          -webkit-transition: all .1s ease
+          -moz-transition: all .1s ease
+          -ms-transition: all .1s ease
+          -o-transition: all .1s ease
+          transition: all .1s ease
+          font-size: 18px
+          display: block
+          line-height: normal
+          color: #7d7d7d
+        &.active
+          font-size: 12px
+          font-weight: 400
+          i
+            font-size: 20px
+            color: #333
+  li
+    a
+      display: block
+      padding: 0 15px
+      line-height: 48px
+      font-size: 15px
+      letter-spacing: .5px
+      text-align: center
+      text-transform: uppercase
+      -webkit-transition: all .1s ease
+      -moz-transition: all .1s ease
+      -ms-transition: all .1s ease
+      -o-transition: all .1s ease
+      transition: all .1s ease
+      color: $grey_2
+      &.active
+        font-size: 16px
+        font-weight: 500
+        background: rgba(#000, .02)
+      &:active
+        background: rgba(#000, .03)
+.tabs-content
+  display: none
+  outline: none
+  &.active
+    display: block

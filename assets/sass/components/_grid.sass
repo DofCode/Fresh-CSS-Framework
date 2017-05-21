@@ -1,0 +1,166 @@
+// ==========================================================================
+// Fresh CSS
+// ==========================================================================
+//
+// Indice
+//
+// 1. Alineaciones
+// 2. Grid simple
+// 3. Offset
+// 4. Cancelar Offset
+
+.container
+  max-width: 1279px
+  width: 100%
+  margin: 0 auto
+  padding: 15px
+
+.row
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 20px
+  &:after
+    content: ""
+    display: table
+    clear: both
+// ==========================================================================
+// 1. Alineaciones
+// ==========================================================================
+.row_left
+  text-align: left
+.row_right
+  text-align: right
+.row_center
+  text-align: center
+// ==========================================================================
+// 2. Grid simple
+// ==========================================================================
+
+
+@for $i from 1 through 12
+  .col_#{$i}
+    width: 8.333333333333333% * $i
+    min-width: 0
+[class^=col_]
+  float: left
+  min-height: 1px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+// ==========================================================================
+// Grid responsivo
+// ==========================================================================
+//laptopL
+@for $i from 1 through 12
+  .laptopL-#{$i}
+    @media(max-width: $laptopL)
+      width: 8.333333333333333% * $i
+
+//laptop
+@for $i from 1 through 12
+  .laptop_#{$i}
+    @media(max-width: $laptop)
+      width: 8.333333333333333% * $i
+
+//tablet
+@for $i from 1 through 12
+  .tablet_#{$i}
+    @media(max-width: $tablet)
+      width: 8.333333333333333% * $i
+
+//mobileL
+@for $i from 1 through 12
+  .mobileL_#{$i}
+    @media(max-width: $mobileL)
+      width: 8.333333333333333% * $i
+
+//mobileM
+@for $i from 1 through 12
+  .mobileM_#{$i}
+    @media(max-width: $mobileM)
+      width: 8.333333333333333% * $i
+
+//mobileS
+@for $i from 1 through 12
+  .mobileS_#{$i}
+    @media(max-width: $mobileS)
+      width: 8.333333333333333% * $i
+
+
+// ==========================================================================
+// 3. Offset
+// ==========================================================================
+@for $i from 1 through 12
+  .offset_#{$i}
+    margin-left: 8.333333333333333% * $i
+
+//laptopL
+@for $i from 1 through 12
+  .offset_laptopL_#{$i}
+    @media(max-width: $laptopL)
+      margin-left: 8.333333333333333% * $i
+
+//laptop
+@for $i from 1 through 12
+  .offset_laptop_#{$i}
+    @media(max-width: $laptop)
+      margin-left: 8.333333333333333% * $i
+
+//tablet
+@for $i from 1 through 12
+  .offset_tablet_#{$i}
+    @media(max-width: $tablet)
+      margin-left: 8.333333333333333% * $i
+
+//mobileL
+@for $i from 1 through 12
+  .offset_mobileL_#{$i}
+    @media(max-width: $mobileL)
+      margin-left: 8.333333333333333% * $i
+
+//mobileM
+@for $i from 1 through 12
+  .offset_mobileM_#{$i}
+    @media(max-width: $mobileM)
+      margin-left: 8.333333333333333% * $i
+
+//mobileS
+@for $i from 1 through 12
+  .offset_mobileS_#{$i}
+    @media(max-width: $mobileS)
+      margin-left: 8.333333333333333% * $i
+
+
+
+// ==========================================================================
+// 4. Cancelar Offset
+// ==========================================================================
+//laptopL
+.offset_laptopL_none
+  @media(max-width: $laptopL)
+    margin-left: 0
+
+//laptop
+.offset_laptop_none
+  @media(max-width: $laptop)
+    margin-left: 0
+
+//tablet
+.offset_tablet_none
+  @media(max-width: $tablet)
+    margin-left: 0
+
+//mobileL
+.offset_mobileL_none
+  @media(max-width: $mobileL)
+    margin-left: 0
+
+//mobileM
+.offset_mobileM_none
+  @media(max-width: $mobileM)
+    margin-left: 0
+
+//mobileS
+.offset_mobileS_none
+  @media(max-width: $mobileS)
+    margin-left: 0

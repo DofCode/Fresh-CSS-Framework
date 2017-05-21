@@ -1,0 +1,147 @@
+// ==========================================================================
+// Fresh CSS
+// ==========================================================================
+//
+// Indice
+//
+//  1. Radios
+//  2. Checkboxs
+
+
+// ==========================================================================
+//  1. Radios
+// ==========================================================================
+.radio_group
+  position: relative
+  margin-top: 18px
+  margin-bottom: 18px
+  label
+    position: relative
+    line-height: 135%
+    margin-left: 2px
+    cursor: pointer
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    input[type=radio]
+      position: relative
+      cursor: pointer
+      outline: none
+      @supports (mix-blend-mode: overlay)
+        margin: 0 1rem 0 0
+        width: 0
+        margin-right: 1.5rem
+      @supports not(mix-blend-mode: overlay)
+          width: auto
+          margin-right: .2rem
+      height: .8rem
+      &[disabled]
+        opacity: .5
+      &:before
+        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        -moz-transition: -moz-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        -webkit-transform: scale(0, 0)
+        -moz-transform: scale(0, 0)
+        -ms-transform: scale(0, 0)
+        -o-transform: scale(0, 0)
+        transform: scale(0, 0)
+        content: ""
+        position: absolute
+        top: -2px
+        left: 0
+        z-index: 1
+        width: 16px
+        height: 16px
+        background: $blue_3
+        border-radius: 50%
+      &:checked:before
+        -webkit-transform: scale(1, 1)
+        -moz-transform: scale(1, 1)
+        -ms-transform: scale(1, 1)
+        -o-transform: scale(1, 1)
+        transform: scale(1, 1)
+      &:after
+        content: ""
+        position: absolute
+        top: -0.25rem
+        left: -0.125rem
+        width: 20px
+        height: 20px
+        background: #FFF
+        border: 2px solid #e6e6e6
+        border-radius: 50%
+      &:checked:after
+        border: 2px solid #FFF
+
+
+// ==========================================================================
+//  2. Checkboxs
+// ==========================================================================
+.checkbox_group
+  position: relative
+  margin-top: 18px
+  margin-bottom: 18px
+  label
+    position: relative
+    line-height: 135%
+    margin-left: 2px
+    cursor: pointer
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    input[type=checkbox]
+      position: relative
+      cursor: pointer
+      outline: none
+      @supports (mix-blend-mode: overlay)
+        margin: 0 1rem 0 0
+        width: 0
+        margin-right: 1.5rem
+      @supports not(mix-blend-mode: overlay)
+          width: auto
+          margin-right: .2rem
+      &[disabled]
+        opacity: .5
+      &:before
+
+        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        -moz-transition: -moz-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75)
+        -webkit-transform: rotate(-45deg) scale(0, 0)
+        -moz-transform: rotate(-45deg) scale(0, 0)
+        -ms-transform: rotate(-45deg) scale(0, 0)
+        -o-transform: rotate(-45deg) scale(0, 0)
+        transform: rotate(-45deg) scale(0, 0)
+        content: ""
+        position: absolute
+        left: 0.1875rem
+        top: 0.125rem
+        z-index: 1
+        width: 1rem
+        height: 0.5rem
+        border: 2px solid $blue_3
+        border-top-style: none
+        border-right-style: none
+      &:checked:before
+        -webkit-transform: rotate(-45deg) scale(1, 1)
+        -moz-transform: rotate(-45deg) scale(1, 1)
+        -ms-transform: rotate(-45deg) scale(1, 1)
+        -o-transform: rotate(-45deg) scale(1, 1)
+        transform: rotate(-45deg) scale(1, 1)
+      &:after
+        content: ""
+        position: absolute
+        top: -0.125rem
+        left: 0
+        width: 20px
+        height: 20px
+        background: #FFF
+        border: 2px solid #e6e6e6
+        cursor: pointer

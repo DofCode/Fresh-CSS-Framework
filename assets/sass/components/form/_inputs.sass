@@ -1,0 +1,97 @@
+// ==========================================================================
+// Fresh CSS
+// ==========================================================================
+//
+// Indice
+//
+//  1. Input, select y textarea
+
+
+// ==========================================================================
+//  1. Input, select y textarea
+// ==========================================================================
+.input_group
+  position: relative
+  margin-top: 18px
+  margin-bottom: 15px
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=time],
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=tel],
+  input[type=number],
+  input[type=search],
+  select,
+  textarea
+    height: 40px
+    font-size: 15px
+    padding: 10px 10px 10px 5px
+    display: block
+    width: 100%
+    border: none
+    outline: none
+    background: none
+    border-bottom: 2px solid #ddd
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+    padding-right: 32px
+    &::-webkit-input-placeholder
+      color: #aaa
+    &:-moz-placeholder
+      color: #aaa
+    &::-moz-placeholder
+      color: #aaa
+    &:-ms-input-placeholder
+      color: #aaa
+    &[disabled]
+      background: #f2f2f2
+    &[disabled] ~ label
+      color: #aaa
+  textarea
+    resize: none
+    min-height: 100px
+    box-sizing: content-box
+    padding: 10px
+    width: calc(100% - 20px)
+  i
+    position: absolute
+    right: 5px
+    font-size: 18px
+    top: 8px
+    color: $grey_3
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+  label
+    color: #8a8a8a
+    font-size: 15px
+    font-weight: normal
+    position: absolute
+    pointer-events: none
+    z-index: 2
+    left: 5px
+    top: -20px
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+  input:focus ~ i
+    color: $grey_1
+  input:focus ~ label,
+  textarea:focus ~ label
+    color: $grey_1
+  input.invalid,
+  select.invalid
+    border-bottom: 2px solid #ff7f7f !important
+    & ~ label
+      color: #ff7f7f !important
+  input.valid,
+  select.valid
+    border-bottom: 2px solid $green_2 !important
+    & ~ label
+      color: $green_2 !important

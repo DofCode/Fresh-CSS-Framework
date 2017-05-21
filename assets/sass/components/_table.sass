@@ -1,0 +1,100 @@
+table, th, td
+   border: none
+table
+  width: 100%
+  display: table
+  &.border > thead > tr,
+  &.border > tbody > tr
+    border-bottom: 1px solid #DDD
+  tbody
+    > tr:nth-child(odd)
+      background-color: #edf0f3
+    > tr > td
+      border-radius: 0
+  &.no_striped > tbody
+    > tr:nth-child(odd)
+      background-color: inherit
+  tbody > tr
+    transition: background-color .25s ease
+    color: $grey_2
+    &:hover
+      background-color: #e6e9ec
+  thead tr th, tbody tr td
+    text-align: center
+  &.no_center
+    thead tr th, tbody tr td
+      text-align: left
+thead
+  border-bottom: 1px solid #DDD
+  tr
+    color: $grey_2
+td, th
+  padding: 15px 5px
+  display: table-cell
+  text-align: left
+  vertical-align: middle
+  border-radius: 2px
+
+@media(max-width: $laptop)
+  table.responsive
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    display: block
+    position: relative
+    td:empty:before
+      content: '\00a0'
+    th,
+    td
+      margin: 0
+      vertical-align: top
+    th
+      text-align: left
+    thead
+      display: block
+      float: left
+      max-width: 130px
+      tr
+        display: block
+        white-space: nowrap
+        padding: 0
+        margin-right: 12px
+        overflow: hidden
+        th::before
+          content: "\00a0"
+
+    tbody
+      display: block
+      width: auto
+      position: relative
+      overflow-x: auto
+      white-space: nowrap
+      tr
+        display: inline-block
+        vertical-align: top
+    th
+      display: block
+      text-align: right
+    td
+      display: block
+      min-height: 1.25em
+      text-align: left
+    tr
+      padding: 0 10px
+
+    /* sort out borders */
+    thead
+      border: 0
+      border-right: 1px solid #DDD
+    &.border
+      th
+        border-bottom: 0
+        border-left: 0
+      td
+        border-left: 0
+        border-right: 0
+        border-bottom: 0
+      tr
+        border: 0
+      tbody tr
+        border-right: 1px solid #DDD
