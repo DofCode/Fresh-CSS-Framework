@@ -4,9 +4,11 @@ Crea tu página web en muy poco tiempo y con la mejor calidad usando Fresh CSS F
 
 Fresh CSS te ayudará a crear una web en muy poco tiempo para dedicarte a el desarrollo back-end sin tener que luchar con el diseño, o adaptar tu web para dispositivos móviles, pues, siempre ha sido un dolor de cabeza para el desarrollador meter una web entera en una pantalla tan pequeña, con Fresh esto es muy fácil, sólo con agregar un par de clases a tu HTML.
 
+![Fresh CSS Framework](https://firebasestorage.googleapis.com/v0/b/freshcss-18a89.appspot.com/o/logo_facebook-d239da5414f41.png?alt=media&token=56ee89aa-223e-4ad7-83f2-3ecb37aace4a)
+
 ## Documentation
 
-[Demo and documentation](https://cssfresh.com)
+[Demo y documentación aquí](https://cssfresh.com)
 
 ## HTML structure
 
@@ -47,6 +49,7 @@ MyWeb/
       |--favicon.ico
       |--index.html
       |   |
+      |   |
       |--assets/
       |   |
       |---css/
@@ -54,7 +57,6 @@ MyWeb/
       |   |
       |---fonts/
       |   |--roboto/
-      |   |--icons/
       |   |
       |---js/
       |   |--fresh.min.js
