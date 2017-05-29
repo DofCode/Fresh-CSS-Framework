@@ -1,14 +1,14 @@
-# Fresh CSS Framework v.1.0.3
-
-Crea tu página web en muy poco tiempo y con la mejor calidad usando Fresh CSS Framework.
+# Fresh CSS v.1.0.3 | Un Framework de CSS
 
 Fresh CSS te ayudará a crear una web en muy poco tiempo para dedicarte a el desarrollo back-end sin tener que luchar con el diseño, o adaptar tu web para dispositivos móviles, pues, siempre ha sido un dolor de cabeza para el desarrollador meter una web entera en una pantalla tan pequeña, con Fresh esto es muy fácil, sólo con agregar un par de clases a tu HTML.
 
-![Fresh CSS Framework](https://firebasestorage.googleapis.com/v0/b/freshcss-18a89.appspot.com/o/logo_facebook-d239da5414f41.png?alt=media&token=56ee89aa-223e-4ad7-83f2-3ecb37aace4a)
+Crear una página web con un framework de CSS te ahorrará tiempo y dinero, los componentes habituales que usa una página web ya están pre-diseñados y sólo es cuestión de usarlos; por otra parte, una de las ventajas de usar un framework de css es su alta compatibilidad con los navegadores existentes, haciendo que el diseño de tu página web sea el mismo en cada uno de ellos.
+
+![Fresh CSS Framework | Framework de css | Diseño web | Crear paginas web | frontend](https://firebasestorage.googleapis.com/v0/b/freshcss-18a89.appspot.com/o/logo_facebook-d239da5414f41.png?alt=media&token=56ee89aa-223e-4ad7-83f2-3ecb37aace4a)
 
 ## Documentation
 
-[Demo y documentación aquí](https://cssfresh.com)
+[Demo y documentación del framework aquí](https://cssfresh.com)
 
 ## HTML structure
 
@@ -44,7 +44,7 @@ Para instalar adecuadamente el Framework en tu web, usa la siguiente estructura 
 La siguiente estructura te dará una idea de que contiene el framework en su versión básica y extendida en Sass para los más experimentados.
 
 ```html
-MyWeb/
+My-Web/
       |--blank.gif
       |--favicon.ico
       |--index.html
